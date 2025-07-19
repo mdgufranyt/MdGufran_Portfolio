@@ -6,7 +6,7 @@ import { StatusBar } from 'expo-status-bar';
 import Header from '../components/Header';
 import Home from '../components/Home';
 import About from '../components/About';
-// import Skills from '../components/Skills';
+import Skills from '../components/Skills';
 // import Qualification from '../components/Qualification';
 // import Portfolio from '../components/Portfolio';
 // import Contact from '../components/Contact';
@@ -22,7 +22,7 @@ export default function PortfolioScreen() {
         {/* with your actual component imports. */}
         <Home />
         <About />
-        {/* <Skills /> */}
+        <Skills />
         {/* <Qualification /> */}
         {/* <Portfolio /> */}
         {/* <Contact /> */}

@@ -11,6 +11,7 @@ import {
 } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { profileImage, resumePdf } from '../constants/assets';
+import { commonStyles, colors } from '../styles/commonStyles';
 
 const InfoBox = ({ title, name }) => (
   <View style={styles.infoBox}>
@@ -30,18 +31,18 @@ const About = () => {
   };
 
   return (
-    <View style={styles.section} id="about">
-      <Text style={styles.sectionTitle}>About Me</Text>
-      <Text style={styles.sectionSubtitle}>My introduction</Text>
+    <View style={commonStyles.section} id="about">
+      <Text style={commonStyles.sectionTitle}>About Me</Text>
+      <Text style={commonStyles.sectionSubtitle}>My introduction</Text>
 
-      <View style={[styles.container, isMobile && styles.mobileContainer]}>
+      <View style={[commonStyles.sectionContainer, styles.container, isMobile && styles.mobileContainer]}>
         <Image
           source={profileImage}
           style={[styles.aboutImage, isMobile && styles.mobileAboutImage]}
         />
 
         <View style={styles.dataContainer}>
-          <Text style={styles.description}>
+          <Text style={styles.descriptionText}>
             I'm a third-year ISE undergraduate, passionate about technology and
             an avid reader. I have a self-motivated and can-do attitude,
             thriving in challenging and dynamic environments. Seeking a
@@ -51,13 +52,13 @@ const About = () => {
           </Text>
 
           <View style={styles.infoContainer}>
-            <InfoBox title="7.5+" name={'Aggregate\nCGPA'} />
+            <InfoBox title="7.5+" name={'Aggregate CGPA'} />
             <InfoBox title="04+" name="Projects" />
-            <InfoBox title="01+" name={'Months\nexperience'} />
+            <InfoBox title="01+" name={'Months experience'} />
           </View>
 
-          <Pressable style={styles.button} onPress={handleDownloadCv}>
-            <Text style={styles.buttonText}>Download CV</Text>
+          <Pressable style={[commonStyles.button, styles.button]} onPress={handleDownloadCv}>
+            <Text style={commonStyles.buttonText}>Download CV</Text>
             <FontAwesome5 name="download" size={20} color="white" />
           </Pressable>
         </View>
@@ -67,26 +68,10 @@ const About = () => {
 };
 
 const styles = StyleSheet.create({
-  section: {
-    paddingVertical: 60,
-    alignItems: 'center',
-  },
-  sectionTitle: {
-    fontSize: 28,
-    fontWeight: 'bold',
-  },
-  sectionSubtitle: {
-    fontSize: 16,
-    color: '#555',
-    marginBottom: 48,
-  },
   container: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    maxWidth: 968,
-    width: '100%',
-    paddingHorizontal: 16,
   },
   mobileContainer: {
     flexDirection: 'column',
@@ -106,10 +91,10 @@ const styles = StyleSheet.create({
   dataContainer: {
     flex: 1,
   },
-  description: {
+  descriptionText: {
     fontSize: 16,
     lineHeight: 24,
-    color: '#333',
+    color: colors.text,
     textAlign: Platform.OS === 'web' ? 'left' : 'center',
     marginBottom: 32,
   },
@@ -124,25 +109,15 @@ const styles = StyleSheet.create({
   infoTitle: {
     fontSize: 22,
     fontWeight: 'bold',
+    color: colors.text,
   },
   infoName: {
     fontSize: 14,
-    color: '#555',
+    color: colors.subtext,
     textAlign: 'center',
   },
   button: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#6E61CA',
-    paddingVertical: 12,
-    paddingHorizontal: 24,
-    borderRadius: 8,
     alignSelf: Platform.OS === 'web' ? 'flex-start' : 'center',
-  },
-  buttonText: {
-    color: 'white',
-    fontSize: 16,
-    marginRight: 8,
   },
 });
 
