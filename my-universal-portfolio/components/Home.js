@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Pressable, Linking, useWindowDimensions } from 
 import { FontAwesome5 } from '@expo/vector-icons';
 import HomeBlob from './HomeBlob';
 import { profileImage } from '../constants/assets';
+import { commonStyles } from '../styles/commonStyles';
 
 const SocialLink = ({ url, iconName }) => (
   <Pressable onPress={() => Linking.openURL(url)}>
@@ -36,8 +37,8 @@ const Home = () => {
           Third-year undergraduate engineering student at{' '}
           <Text style={{ fontWeight: 'bold' }}>Dronacharya Group of Institution</Text>, Greater Noida.
         </Text>
-        <Pressable style={styles.button}>
-          <Text style={styles.buttonText}>Contact me</Text>
+        <Pressable style={[commonStyles.button, styles.button]}>
+          <Text style={commonStyles.buttonText}>Contact me</Text>
           <FontAwesome5 name="comment-alt" size={20} color="white" />
         </Pressable>
       </View>
@@ -57,8 +58,8 @@ const Home = () => {
         Third-year undergraduate engineering student at{' '}
         <Text style={{ fontWeight: 'bold' }}>Dronacharya Group of Institution</Text>, Greater Noida.
       </Text>
-      <Pressable style={[styles.button, styles.mobileButton]}>
-        <Text style={styles.buttonText}>Contact me</Text>
+      <Pressable style={[commonStyles.button, styles.button, styles.mobileButton]}>
+        <Text style={commonStyles.buttonText}>Contact me</Text>
         <FontAwesome5 name="comment-alt" size={20} color="white" />
       </Pressable>
       <View style={[styles.socialBar, styles.mobileSocialBar]}>
@@ -146,21 +147,10 @@ const styles = StyleSheet.create({
     marginTop: 24,
   },
   button: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#6E61CA',
-    paddingVertical: 12,
-    paddingHorizontal: 24,
-    borderRadius: 8,
     alignSelf: 'flex-start', // Don't stretch to full width
   },
   mobileButton: {
     alignSelf: 'center',
-  },
-  buttonText: {
-    color: 'white',
-    fontSize: 16,
-    marginRight: 8,
   },
 });
 
