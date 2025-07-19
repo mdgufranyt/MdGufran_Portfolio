@@ -6,6 +6,7 @@ import {
   Pressable,
   Modal,
   SafeAreaView,
+  useWindowDimensions,
 } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { commonStyles, colors } from '../styles/commonStyles';
@@ -43,7 +44,7 @@ const educationData = [
   },
 ];
 
-const TimelineItem = ({ data, isLeft, isLast, onViewMore }) => {
+const TimelineItem = ({ data, isLeft, isLast, onViewMore, isMobile }) => {
   const content = (
     <View style={styles.timelineContent}>
       <Text style={styles.timelineTitle}>{data.title}</Text>
@@ -69,9 +70,9 @@ const TimelineItem = ({ data, isLeft, isLast, onViewMore }) => {
 
   return (
     <View style={styles.timelineRow}>
-      {isLeft ? content : <View style={{ flex: 1 }} />}
+      {isMobile || isLeft ? content : <View style={{ flex: 1 }} />}
       {graphics}
-      {!isLeft ? content : <View style={{ flex: 1 }} />}
+      {!isMobile && !isLeft ? content : <View style={{ flex: 1 }} />}
     </View>
   );
 };
@@ -79,6 +80,8 @@ const TimelineItem = ({ data, isLeft, isLast, onViewMore }) => {
 const Qualification = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null);
+  const { width } = useWindowDimensions();
+  const isMobile = width < 768;
 
   const handleViewMore = (item) => {
     setSelectedItem(item);
@@ -106,6 +109,7 @@ const Qualification = () => {
               isLeft={index % 2 === 0}
               isLast={index === educationData.length - 1}
               onViewMore={handleViewMore}
+              isMobile={isMobile}
             />
           ))}
         </View>
