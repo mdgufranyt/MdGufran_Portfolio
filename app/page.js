@@ -1,6 +1,7 @@
 // app/page.js
 // Remember to install dependencies: npm install lucide-react
 
+import Image from 'next/image';
 import { Mail, Github, Linkedin, Twitter, ArrowRight, Code, Brush, Smartphone, Download, MapPin, Palette } from 'lucide-react';
 
 // --- Reusable Components ---
@@ -31,9 +32,11 @@ const ServiceCard = ({ icon, title, description }) => (
 
 const ProjectCard = ({ image, title, category }) => (
     <div className="group relative overflow-hidden rounded-2xl h-full">
-        <img 
+        <Image 
             src={image} 
             alt={title} 
+            width={600}
+            height={400}
             className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" 
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent transition-all duration-300"></div>
@@ -73,10 +76,12 @@ const HeroSection = () => (
   <section id="home" className="min-h-screen flex flex-col justify-center items-center text-center pt-24 pb-12 px-4 relative">
      <div className="absolute top-0 inset-x-0 h-64 bg-gradient-to-b from-purple-50 via-white to-white z-0"></div>
      <div className="relative z-10">
-        <img
+        <Image
             src="https://placehold.co/80x80/000000/FFFFFF?text=MG"
             alt="Md Gufran"
-            className="w-20 h-20 rounded-full mx-auto mb-6 border-4 border-white shadow-lg"
+            width={80}
+            height={80}
+            className="rounded-full mx-auto mb-6 border-4 border-white shadow-lg"
         />
         <h1 className="text-4xl md:text-6xl font-light text-gray-800 mb-2 tracking-wide">
             frontend web developer
@@ -108,9 +113,11 @@ const AboutSection = () => (
       <h2 className="text-3xl font-light text-center mb-16 text-gray-800">About me</h2>
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-20">
         <div className="md:w-1/3 flex justify-center">
-            <img 
+            <Image 
                 src="https://placehold.co/400x500/F3F4F6/374151?text=Md+Gufran" 
                 alt="Md Gufran profile"
+                width={400}
+                height={500}
                 className="rounded-2xl shadow-xl w-full max-w-xs object-cover"
             />
         </div>
@@ -134,12 +141,12 @@ const AboutSection = () => (
             <div className="flex justify-center md:justify-start items-center space-x-4">
                 <p className="text-gray-600 font-medium">My Skills:</p>
                 <div className="flex items-center space-x-3">
-                    <img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="Kotlin" className="w-7 h-7"/>
-                    <img src="https://www.vectorlogo.zone/logos/android/android-icon.svg" alt="Android" className="w-7 h-7"/>
-                    <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="React" className="w-7 h-7"/>
-                    <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" alt="Node.js" className="w-7 h-7"/>
-                    <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind CSS" className="w-7 h-7"/>
-                    <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="Firebase" className="w-7 h-7"/>
+                    <Image src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="Kotlin" width={28} height={28}/>
+                    <Image src="https://www.vectorlogo.zone/logos/android/android-icon.svg" alt="Android" width={28} height={28}/>
+                    <Image src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="React" width={28} height={28}/>
+                    <Image src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" alt="Node.js" width={28} height={28}/>
+                    <Image src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind CSS" width={28} height={28}/>
+                    <Image src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="Firebase" width={28} height={28}/>
                 </div>
             </div>
         </div>
