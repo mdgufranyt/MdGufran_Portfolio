@@ -31,7 +31,13 @@ const ServiceCard = ({ icon, title, description }) => (
 
 const ProjectCard = ({ image, title, category }) => (
     <div className="group relative overflow-hidden rounded-2xl">
-        <img src={image} alt={title} className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" />
+        <img 
+            src={image} 
+            alt={title} 
+            width={600}
+            height={400}
+            className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" 
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent transition-all duration-300"></div>
         <div className="absolute bottom-0 left-0 p-6 w-full">
             <div className="flex justify-between items-end">
@@ -72,7 +78,9 @@ const HeroSection = () => (
         <img
             src="https://placehold.co/80x80/000000/FFFFFF?text=MG"
             alt="Md Gufran"
-            className="w-20 h-20 rounded-full mx-auto mb-6 border-4 border-white shadow-lg"
+            width={80}
+            height={80}
+            className="rounded-full mx-auto mb-6 border-4 border-white shadow-lg"
         />
         <h1 className="text-4xl md:text-6xl font-light text-gray-800 mb-2 tracking-wide">
             frontend web developer
@@ -85,7 +93,7 @@ const HeroSection = () => (
             </span>
         </h2>
         <p className="max-w-xl mx-auto text-gray-600 mb-8">
-            I'm a passionate and creative developer with a love for crafting beautiful and functional web experiences.
+            I&apos;m a passionate and creative developer with a love for crafting beautiful and functional web experiences.
         </p>
         <div className="flex justify-center space-x-4">
             <Button href="#contact">HIRE ME</Button>
@@ -107,6 +115,8 @@ const AboutSection = () => (
             <img 
                 src="https://placehold.co/400x500/F3F4F6/374151?text=Md+Gufran" 
                 alt="Md Gufran profile"
+                width={400}
+                height={500}
                 className="rounded-2xl shadow-xl w-full max-w-xs"
             />
         </div>
@@ -115,7 +125,7 @@ const AboutSection = () => (
                 Hey there! I’m MD Gufran, a B.Tech student majoring in Computer Science & Engineering. My tech journey started in high school with a fascination for HTML, CSS, and JavaScript, which has since grown into a full-blown passion for both web and Android development.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
-                I love building things that not only work but feel intuitive, blending logic with a strong sense of design. Whether I'm crafting pixel-perfect websites or developing user-focused mobile apps with Kotlin and Jetpack Compose, my goal is always to turn great ideas into clean, scalable, and engaging products.
+                I love building things that not only work but feel intuitive, blending logic with a strong sense of design. Whether I&apos;m crafting pixel-perfect websites or developing user-focused mobile apps with Kotlin and Jetpack Compose, my goal is always to turn great ideas into clean, scalable, and engaging products.
             </p>
             <div className="grid grid-cols-2 gap-6 mb-10 text-left">
                 <div className="bg-gray-50 p-4 rounded-lg">
@@ -130,12 +140,12 @@ const AboutSection = () => (
             <div className="flex justify-center md:justify-start items-center space-x-4">
                 <p className="text-gray-600 font-medium">My Skills:</p>
                 <div className="flex items-center space-x-3">
-                    <img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="Kotlin" className="w-7 h-7"/>
-                    <img src="https://www.vectorlogo.zone/logos/android/android-icon.svg" alt="Android" className="w-7 h-7"/>
-                    <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="React" className="w-7 h-7"/>
-                    <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" alt="Node.js" className="w-7 h-7"/>
-                    <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind CSS" className="w-7 h-7"/>
-                    <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="Firebase" className="w-7 h-7"/>
+                    <img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="Kotlin" width={28} height={28}/>
+                    <img src="https://www.vectorlogo.zone/logos/android/android-icon.svg" alt="Android" width={28} height={28}/>
+                    <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="React" width={28} height={28}/>
+                    <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" alt="Node.js" width={28} height={28}/>
+                    <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind CSS" width={28} height={28}/>
+                    <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="Firebase" width={28} height={28}/>
                 </div>
             </div>
         </div>
@@ -175,7 +185,7 @@ const WorkSection = () => {
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-light text-center mb-4 text-gray-800">My latest work</h2>
                 <p className="max-w-2xl mx-auto text-center text-gray-600 mb-16">
-                    Here's a selection of my recent projects. I'm proud of every single one of them.
+                    Here&apos;s a selection of my recent projects. I&apos;m proud of every single one of them.
                 </p>
                 <div className="grid md:grid-cols-2 gap-8">
                     {projects.map(p => <ProjectCard key={p.title} {...p} />)}
@@ -190,7 +200,7 @@ const ContactSection = () => (
         <div className="container mx-auto px-4">
             <h2 className="text-3xl font-light text-center mb-4 text-gray-800">Get in touch</h2>
             <p className="max-w-2xl mx-auto text-center text-gray-600 mb-12">
-                Have a project in mind? I'd love to hear from you.
+                Have a project in mind? I&apos;d love to hear from you.
             </p>
             <div className="max-w-xl mx-auto">
                 <div className="bg-white p-8 sm:p-12 rounded-2xl shadow-lg">
