@@ -30,12 +30,10 @@ const ServiceCard = ({ icon, title, description }) => (
 );
 
 const ProjectCard = ({ image, title, category }) => (
-    <div className="group relative overflow-hidden rounded-2xl">
+    <div className="group relative overflow-hidden rounded-2xl h-full">
         <img 
             src={image} 
             alt={title} 
-            width={600}
-            height={400}
             className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" 
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent transition-all duration-300"></div>
@@ -78,9 +76,7 @@ const HeroSection = () => (
         <img
             src="https://placehold.co/80x80/000000/FFFFFF?text=MG"
             alt="Md Gufran"
-            width={80}
-            height={80}
-            className="rounded-full mx-auto mb-6 border-4 border-white shadow-lg"
+            className="w-20 h-20 rounded-full mx-auto mb-6 border-4 border-white shadow-lg"
         />
         <h1 className="text-4xl md:text-6xl font-light text-gray-800 mb-2 tracking-wide">
             frontend web developer
@@ -115,14 +111,12 @@ const AboutSection = () => (
             <img 
                 src="https://placehold.co/400x500/F3F4F6/374151?text=Md+Gufran" 
                 alt="Md Gufran profile"
-                width={400}
-                height={500}
-                className="rounded-2xl shadow-xl w-full max-w-xs"
+                className="rounded-2xl shadow-xl w-full max-w-xs object-cover"
             />
         </div>
         <div className="md:w-2/3 text-center md:text-left">
             <p className="text-gray-600 leading-relaxed mb-6">
-                Hey there! I’m MD Gufran, a B.Tech student majoring in Computer Science & Engineering. My tech journey started in high school with a fascination for HTML, CSS, and JavaScript, which has since grown into a full-blown passion for both web and Android development.
+                Hey there! I&apos;m MD Gufran, a B.Tech student majoring in Computer Science & Engineering. My tech journey started in high school with a fascination for HTML, CSS, and JavaScript, which has since grown into a full-blown passion for both web and Android development.
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
                 I love building things that not only work but feel intuitive, blending logic with a strong sense of design. Whether I&apos;m crafting pixel-perfect websites or developing user-focused mobile apps with Kotlin and Jetpack Compose, my goal is always to turn great ideas into clean, scalable, and engaging products.
@@ -140,12 +134,12 @@ const AboutSection = () => (
             <div className="flex justify-center md:justify-start items-center space-x-4">
                 <p className="text-gray-600 font-medium">My Skills:</p>
                 <div className="flex items-center space-x-3">
-                    <img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="Kotlin" width={28} height={28}/>
-                    <img src="https://www.vectorlogo.zone/logos/android/android-icon.svg" alt="Android" width={28} height={28}/>
-                    <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="React" width={28} height={28}/>
-                    <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" alt="Node.js" width={28} height={28}/>
-                    <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind CSS" width={28} height={28}/>
-                    <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="Firebase" width={28} height={28}/>
+                    <img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="Kotlin" className="w-7 h-7"/>
+                    <img src="https://www.vectorlogo.zone/logos/android/android-icon.svg" alt="Android" className="w-7 h-7"/>
+                    <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="React" className="w-7 h-7"/>
+                    <img src="https://www.vectorlogo.zone/logos/nodejs/nodejs-icon.svg" alt="Node.js" className="w-7 h-7"/>
+                    <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="Tailwind CSS" className="w-7 h-7"/>
+                    <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="Firebase" className="w-7 h-7"/>
                 </div>
             </div>
         </div>
