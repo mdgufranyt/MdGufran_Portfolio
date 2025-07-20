@@ -53,7 +53,7 @@ const ProjectCard = ({ image, title, category }) => (
 const Header = () => (
   <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md">
     <div className="container mx-auto px-4 h-20 flex justify-between items-center">
-      <a href="#home" className="text-2xl font-bold text-gray-900">William.</a>
+      <a href="#home" className="text-2xl font-bold text-gray-900">Md Gufran.</a>
       <nav className="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-500">
         <a href="#home" className="hover:text-gray-900 transition-colors">Home</a>
         <a href="#about" className="hover:text-gray-900 transition-colors">About</a>
@@ -70,8 +70,8 @@ const HeroSection = () => (
      <div className="absolute top-0 inset-x-0 h-64 bg-gradient-to-b from-purple-50 via-white to-white z-0"></div>
      <div className="relative z-10">
         <img
-            src="https://placehold.co/80x80/000000/FFFFFF?text=W"
-            alt="William"
+            src="https://placehold.co/80x80/000000/FFFFFF?text=MG"
+            alt="Md Gufran"
             className="w-20 h-20 rounded-full mx-auto mb-6 border-4 border-white shadow-lg"
         />
         <h1 className="text-4xl md:text-6xl font-light text-gray-800 mb-2 tracking-wide">
@@ -81,7 +81,7 @@ const HeroSection = () => (
             based in 
             <span className="flex items-center gap-2 bg-gray-100 px-4 py-1 rounded-full font-normal">
                 <MapPin className="w-5 h-5 text-gray-500" />
-                London.
+                Delhi.
             </span>
         </h2>
         <p className="max-w-xl mx-auto text-gray-600 mb-8">
@@ -105,14 +105,14 @@ const AboutSection = () => (
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-20">
         <div className="md:w-1/3 flex justify-center">
             <img 
-                src="https://placehold.co/400x500/F3F4F6/374151?text=William" 
-                alt="William profile"
+                src="https://placehold.co/400x500/F3F4F6/374151?text=Md+Gufran" 
+                alt="Md Gufran profile"
                 className="rounded-2xl shadow-xl w-full max-w-xs"
             />
         </div>
         <div className="md:w-2/3 text-center md:text-left">
             <p className="text-gray-600 leading-relaxed mb-8">
-                Hello! I'm William, a frontend developer based in London. I specialize in creating modern, responsive, and user-friendly websites. My passion lies in turning complex problems into simple, beautiful, and intuitive designs. I have a strong eye for detail and a commitment to writing clean, efficient code.
+                Hello! I'm Md Gufran, a frontend developer based in Delhi. I specialize in creating modern, responsive, and user-friendly websites. My passion lies in turning complex problems into simple, beautiful, and intuitive designs. I have a strong eye for detail and a commitment to writing clean, efficient code.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-10 text-left">
                 <div className="bg-gray-50 p-4 rounded-lg">
@@ -221,8 +221,8 @@ const ContactSection = () => (
 const Footer = () => (
     <footer className="bg-white text-gray-600 py-8">
         <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-            <a href="#home" className="text-2xl font-bold text-gray-900 mb-4 md:mb-0">William.</a>
-            <p className="text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} William. All Rights Reserved.</p>
+            <a href="#home" className="text-2xl font-bold text-gray-900 mb-4 md:mb-0">Md Gufran.</a>
+            <p className="text-sm mb-4 md:mb-0">&copy; {new Date().getFullYear()} Md Gufran. All Rights Reserved.</p>
             <div className="flex space-x-6">
                 <a href="#" className="hover:text-gray-900 transition-colors"><Twitter /></a>
                 <a href="#" className="hover:text-gray-900 transition-colors"><Github /></a>
