@@ -2,7 +2,7 @@
 
 import { Mail, Github, Linkedin, Twitter, ArrowRight, Code, Brush, Smartphone, Download, MapPin, Palette } from 'lucide-react';
 
-// --- Reusable Components ---
+// --- Reusable Components ----
 
 const Button = ({ href, children, variant = 'primary', className = '' }) => {
   const baseClasses = "px-8 py-3 rounded-full font-semibold transition-all duration-300 ease-in-out flex items-center justify-center space-x-2 text-sm";
