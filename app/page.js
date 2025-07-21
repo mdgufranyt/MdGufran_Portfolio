@@ -1,4 +1,3 @@
-// app/page.js
 // Remember to install dependencies: npm install lucide-react
 
 import { Mail, Github, Linkedin, Twitter, ArrowRight, Code, Brush, Smartphone, Download, MapPin, Palette } from 'lucide-react';
